@@ -1,14 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom'; // Import only parts that we use. Tree shaking use only what you need.
-
-const Pet = (props) => {
-  // Expects parent to give some properties. Gives Flexibility.
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
+import Pet from './Pet';
 
 const App = () => {
   return React.createElement(
