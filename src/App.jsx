@@ -1,3 +1,6 @@
+import React from 'react';
+import { createRoot } from 'react-dom'; // Import only parts that we use. Tree shaking use only what you need.
+
 const Pet = (props) => {
   // Expects parent to give some properties. Gives Flexibility.
   return React.createElement("div", {}, [
@@ -34,5 +37,5 @@ const App = () => {
 };
 
 const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
+const root = createRoot(container);
 root.render(React.createElement(App)); // We give a component here, if we put text it renders the tag.
