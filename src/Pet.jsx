@@ -1,5 +1,3 @@
-import React from "react";
-
 const Pet = (props) => {
   // Expects parent to give some properties. Gives Flexibility.
   return (

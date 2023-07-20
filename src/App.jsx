@@ -1,33 +1,19 @@
-import React from 'react';
-import { createRoot } from 'react-dom'; // Import only parts that we use. Tree shaking use only what you need.
-import Pet from './Pet';
+import { createRoot } from "react-dom/client"; // Import only parts that we use. Tree shaking use only what you need.
+import SearchParams from "./SearchParams";
+import Pet from "./Pet";
 
 const App = () => {
-  return React.createElement(
-    // component has to return a markup.
-    "div", // What kind of element we are adding here. We give a string so it becomes a tag.
-    {}, // Whatever attributes we want to add to this html element. Can be null too. Optional
-    [
-      React.createElement("h1", {}, "Adopt Me"), //Child Nested inside div we have an h1 tag here. Optional
-      React.createElement(Pet, {
-        name: "Charlie",
-        animal: "Dog",
-        breed: "Cocker Spaniel Indie",
-      }),
-      React.createElement(Pet, {
-        name: "Shifu",
-        animal: "Dog",
-        breed: "Shitzu",
-      }),
-      React.createElement(Pet, {
-        name: "Ice",
-        animal: "Dog",
-        breed: "Hmm",
-      }),
-    ]
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      {/* <Pet name="Charlie" animal="Dog" breed="Cocker Spaniel Indie" />
+      <Pet name="Kitkat" animal="Fish" breed="Gold Fish" />
+      <Pet name="Shifu" animal="Dog" breed="Shihtzu" /> */}
+      <SearchParams />
+    </div>
   );
 };
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(React.createElement(App)); // We give a component here, if we put text it renders the tag.
+root.render(<App />); // We give a component here, if we put text it renders the tag.
