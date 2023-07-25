@@ -1,5 +1,7 @@
 const Pet = (props) => {
   // Expects parent to give some properties. Gives Flexibility.
+  const { name, animal, breed, images, location, id } = props;
+
   return (
     <div>
       <h1>{props.name}</h1>
